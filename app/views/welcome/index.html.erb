@@ -1,0 +1,35 @@
+<div class="container">
+            
+                      <div class="col l12 s12 m12">
+                          <h1>Inicie Sesion Administrador/Empleado</h1>
+                          <p><%= @errorlogin %></p>
+                      </div>       
+                                        <!-- variable :session es un array que contiene los parametros del form session.usuario_elegido por ejemplo -->
+                        <%= form_for(:session, url: welcome_path, local: true) do |form| %>
+                                	<!--<div class="row">-->
+                                                <% options_for_select = Array.new
+                                                @usuarios.each do |usuario| %>
+                                                <% options_for_select.push(usuario.usu_nombre) %>
+                                                <% end %>
+                                                <%= form.select :usuario_elegido, options_for_select, :prompt => "Select One", :class => 'select' %>
+
+                                         <i class="material-icons prefix  red-text">lock</i>
+                                  	    	<%= form.password_field :password_escrito %>
+                                  		
+                                	</div>
+                        <div class="spinner" id="snipper">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>        
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                                <div class="rect6"></div>
+                                <div class="rect7"></div>
+                        </div>
+                        <div class="col l5 center-align">
+                           <!-- <button class="btn waves-effect waves-light blue" type="submit" name="submit" id="btn_login">Iniciar Sesion</button> -->
+                        <%= form.submit "Iniciar Sesion" %>
+                        </div>
+                     <% end %>
+
+</div><!-- fin del container principal-->

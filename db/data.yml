@@ -1,0 +1,176 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2018-11-04 09:55:46.000000000 Z
+    - 2018-11-04 09:56:15.000000000 Z
+
+---
+clientes:
+  columns:
+  - cli_id
+  - cli_nombre
+  - cli_tel
+  - zon_id
+  records: 
+  - - 1
+    - Julian Ramos
+    - '3489890820'
+    - 1
+  - - 2
+    - Esteban Lopez
+    - '2348765729'
+    - 2
+  - - 3
+    - Noelia Suarez
+    - '23449820'
+    - 3
+  - - 4
+    - Rogelio Andrada
+    - '234879020'
+    - 4
+
+---
+empleados:
+  columns:
+  - emp_id
+  - emp_nombre
+  - emp_telefono
+  records: 
+  - - 1
+    - El roto
+    - '23498900'
+  - - 2
+    - El cabeza
+    - '23889000'
+
+---
+insumos:
+  columns:
+  - ins_id
+  - ins_nombre
+  - ins_descripcion
+  records: 
+  - - 1
+    - Fuego
+    - Fuego para quema todo
+  - - 2
+    - Veneno
+    - Veneno cosmico
+  - - 3
+    - Hidrocloruro de sodio
+    - Para tirar por to lado
+
+---
+pagos:
+  columns:
+  - pagos_id
+  - tar_id
+  - pagos_importe
+  - pagos_fecha
+  - cli_id
+  - emp_id
+  records: 
+  - - 1
+    - 1
+    - 3999.0
+    - 2018-11-13
+    - 1
+    - 1
+
+---
+tarea_insumos:
+  columns:
+  - tar_id
+  - ins_id
+  - cantidad
+  records: 
+  - - 1
+    - 1
+    - 4
+  - - 2
+    - 1
+    - 3
+  - - 3
+    - 2
+    - 4
+  - - 4
+    - 1
+    - 3
+  - - 4
+    - 2
+    - 3
+  - - 4
+    - 3
+    - 2
+
+---
+tareas:
+  columns:
+  - tar_id
+  - tar_descripcion
+  - cli_id
+  - emp_id
+  - tar_importe
+  records: 
+  - - 1
+    - Exterminio de pulgas
+    - 1
+    - 1
+    - 2333.0
+  - - 2
+    - Exterminio de ratas
+    - 2
+    - 1
+    - 3300.0
+  - - 3
+    - Fumigacion
+    - 1
+    - 2
+    - 
+
+---
+usuarios:
+  columns:
+  - usu_id
+  - usu_nombre
+  - usu_email
+  - usu_password
+  - ran_id
+  records: 
+  - - 1
+    - Administrador
+    - admin@gmail.com
+    - admin
+    - 1
+  - - 2
+    - Empleado
+    - empleado@gmail.com
+    - empleado
+    - 2
+
+---
+zonas:
+  columns:
+  - zon_id
+  - zon_nombre
+  records: 
+  - - 1
+    - Hipodromo
+  - - 2
+    - Fenix
+  - - 3
+    - Banda Norte
+  - - 4
+    - Centro
+  - - 5
+    - Alberdi
+  - - 6
+    - Pizarro
